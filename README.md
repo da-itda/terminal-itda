@@ -22,6 +22,15 @@ What the installer does
 2. Checks Claude Code, Codex and herdr. It asks before installing anything missing or updating anything out of date.
 3. Sets up the background service and terminal integration, then shows a QR code to connect your phone.
 
+## AI workspace tools
+If you use herdr, Orca or cmux, their agents show up in the phone app too (a tab per tool), with their conversations and input.
+Tools found on the computer are on by default. Turn one off in the app (computer ⋮ > Tools) or on the computer:
+```sh
+terminal-itda tools            # what is installed and running
+terminal-itda tools off orca   # or: on, start
+```
+cmux only lets other programs in when Settings > Automation allows automation.
+
 ## Update
 ```sh
 terminal-itda update
