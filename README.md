@@ -5,13 +5,13 @@ Install it on your computer, scan the QR code with the phone app, and you're con
 
 ## Install (one line in the terminal)
 
-**macOS**
+**macOS · Linux**
 ```sh
 curl -fsSL https://github.com/da-itda/terminal-itda/releases/latest/download/install.sh | sh
 ```
+Linux needs systemd for the background service (Ubuntu, Debian, Fedora, …).
 
-**Windows** — coming soon  
-**Linux** — coming soon
+**Windows** — coming soon
 
 What the installer does
 1. Installs terminal-itda (short alias: `itda`) for your OS and CPU, or updates it to the latest version.
