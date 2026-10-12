@@ -31,6 +31,13 @@ terminal-itda tools off orca   # or: on, start
 ```
 cmux only lets other programs in when Settings > Automation allows automation.
 
+## SSH from your phone (Tailscale)
+If the computer is on Tailscale, the app offers to add it as an SSH host: Tailscale SSH where it runs (Linux, Homebrew macOS), else the computer's SSH server with the phone's key.
+```sh
+terminal-itda ssh    # what is set up, and set up what is missing
+```
+On Windows, keys of administrator accounts are approved on the computer with `terminal-itda ssh`.
+
 ## Update
 ```sh
 terminal-itda update
