@@ -14,13 +14,13 @@ curl -fsSL https://github.com/da-itda/terminal-itda/releases/latest/download/ins
 **Linux** — coming soon
 
 What the installer does
-1. Installs itda for your OS and CPU, or updates it to the latest version.
+1. Installs terminal-itda (short alias: `itda`) for your OS and CPU, or updates it to the latest version.
 2. Checks Claude Code, Codex and herdr. It asks before installing anything missing or updating anything out of date.
 3. Sets up the background service and terminal integration, then shows a QR code to connect your phone.
 
 ## Update
 ```sh
-itda update
+terminal-itda update
 ```
 
 This repository contains release files only.
