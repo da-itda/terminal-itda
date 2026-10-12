@@ -11,7 +11,11 @@ curl -fsSL https://github.com/da-itda/terminal-itda/releases/latest/download/ins
 ```
 Linux needs systemd for the background service (Ubuntu, Debian, Fedora, …).
 
-**Windows** — coming soon
+**Windows** (PowerShell, Windows 10 1809 or later)
+```powershell
+irm https://github.com/da-itda/terminal-itda/releases/latest/download/install.ps1 | iex
+```
+If Windows Firewall asks about terminal-itda, allow it so phones on your Wi-Fi connect directly.
 
 What the installer does
 1. Installs terminal-itda (short alias: `itda`) for your OS and CPU, or updates it to the latest version.
