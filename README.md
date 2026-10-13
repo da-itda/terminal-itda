@@ -1,6 +1,7 @@
 # terminal-itda
 
-Use your computer's terminal and AI coding tools (Claude Code, Codex) from your phone.
+Reach your computer's AI coding agents (Claude Code, Codex in herdr, Orca or cmux) from your phone.
+terminal-itda only connects: you keep working in your own terminals and tools, and the phone app shows and continues the same agents — work you start on the phone opens in those tools too.
 Install it on your computer, scan the QR code with the phone app, and you're connected.
 
 ## Install (one line in the terminal)
@@ -19,8 +20,10 @@ If Windows Firewall asks about terminal-itda, allow it so phones on your Wi-Fi c
 
 What the installer does
 1. Installs terminal-itda (short alias: `itda`) for your OS and CPU, or updates it to the latest version.
-2. Checks Claude Code, Codex and herdr. It asks before installing anything missing or updating anything out of date.
-3. Sets up the background service and terminal integration, then shows a QR code to connect your phone.
+2. Checks Claude Code, Codex and herdr (recommended when you have none of herdr, Orca, cmux). It asks before installing or updating anything.
+3. Sets up the background service and SSH through Tailscale (optional), then shows a QR code to connect your phone.
+
+Run `terminal-itda` for the commands (`setup`, `pair`, `tools`, `ssh`, `status`, `update`, …).
 
 ## AI workspace tools
 If you use herdr, Orca or cmux, their agents show up in the phone app too (a tab per tool), with their conversations and input.
