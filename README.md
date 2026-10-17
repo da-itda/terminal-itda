@@ -20,19 +20,22 @@ If Windows Firewall asks about terminal-itda, allow it so phones on your Wi-Fi c
 
 What the installer does
 1. Installs terminal-itda (short alias: `itda`) for your OS and CPU, or updates it to the latest version.
-2. Checks Claude Code, Codex and herdr (recommended when you have none of herdr, Orca, cmux). It asks before installing or updating anything.
+2. Checks Claude Code, Codex and herdr (optional). It asks before installing or updating anything.
 3. Sets up the background service and SSH through Tailscale (optional), then shows a QR code to connect your phone.
 
 Run `terminal-itda` for the commands (`setup`, `pair`, `tools`, `ssh`, `status`, `update`, …).
 
 ## AI workspace tools
-If you use herdr, Orca or cmux, their agents show up in the phone app too (a tab per tool), with their conversations and input.
+If you use herdr, Orca or cmux, their agents show up in the phone app too (a tab per tool), with their conversations and input. None needed: without a tool, work started on the phone runs in terminal-itda's own session in the folder you pick.
 Tools found on the computer are on by default. Turn one off in the app (computer ⋮ > Tools) or on the computer:
 ```sh
 terminal-itda tools            # what is installed and running
 terminal-itda tools off orca   # or: on, start
 ```
 cmux only lets other programs in when Settings > Automation allows automation.
+
+## AI plan usage
+The app's home shows how much of your Claude Code and Codex plans is left (5-hour and weekly windows) and when each refills. The computer reads it with the login those tools already have; the login never leaves the computer, only the percentages and reset times.
 
 ## SSH from your phone (Tailscale)
 If the computer is on Tailscale, the app offers to add it as an SSH host: Tailscale SSH where it runs (Linux, Homebrew macOS), else the computer's SSH server with the phone's key.
