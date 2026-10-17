@@ -37,6 +37,9 @@ cmux only lets other programs in when Settings > Automation allows automation.
 ## AI plan usage
 The app's home shows how much of your Claude Code and Codex plans is left (5-hour and weekly windows) and when each refills. The computer reads it with the login those tools already have; the login never leaves the computer, only the percentages and reset times.
 
+## Images for the AI
+Photos, camera shots and clipboard images from the app's chat go to the computer (encrypted, kept 7 days in `~/.itda/uploads`) and Claude Code or Codex reads them.
+
 ## SSH from your phone (Tailscale)
 If the computer is on Tailscale, the app offers to add it as an SSH host: Tailscale SSH where it runs (Linux, Homebrew macOS), else the computer's SSH server with the phone's key.
 ```sh
