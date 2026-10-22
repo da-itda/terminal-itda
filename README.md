@@ -48,6 +48,8 @@ The installer asks before it changes anything. It sets terminal-itda to start wh
 
 To connect another phone later, run `terminal-itda pair`.
 
+On macOS and Windows, terminal-itda also has an icon in the menu bar (macOS) or the notification area (Windows). Its menu shows the connected phones, work in progress and the computer's IP addresses (click one to copy it). From the same menu you can turn keep awake on or off, connect a smartphone, check for updates and install them, and quit terminal-itda.
+
 ## Requirements
 
 - macOS, Linux with systemd (Ubuntu, Debian, Fedora, …), or Windows 10 (1809) or later
