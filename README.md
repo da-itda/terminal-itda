@@ -1,55 +1,97 @@
 # terminal-itda
 
-Reach your computer's AI coding agents (Claude Code, Codex in herdr, Orca or cmux) from your phone.
-terminal-itda only connects: you keep working in your own terminals and tools, and the phone app shows and continues the same agents — work you start on the phone opens in those tools too.
-Install it on your computer, scan the QR code with the phone app, and you're connected.
+Your computer's AI at work, live in your pocket.
 
-## Install (one line in the terminal)
+terminal-itda lets you follow and steer Claude Code and Codex on your computer from your phone. Start a task at your desk, walk away, and pick it up on the phone: read the replies, answer its questions, send the next instruction. You get a notification when the work is done.
 
-**macOS · Linux**
+It has two parts: a phone app, and a small program you install on your computer. This repository has the computer program. The source code is not public.
+
+**Phone app:** Android and iPhone coming soon<br>
+**Website:** coming soon<br>
+**Contact:** [customer@newer.co.kr](mailto:customer@newer.co.kr)
+
+## What you can do from the phone
+
+- See what each AI is working on, on every computer you connect
+- Read the conversation and reply in a chat view, or open the real terminal
+- Get a notification when a task finishes or needs your answer
+- Send photos, screenshots or clipboard images for the AI to look at
+- Tap a file the AI mentions (`docs/PLAN.md:12`) to read it from the computer
+- See how much of your Claude and Codex plan is left, and when it resets
+- Keep a laptop awake, even with the lid closed, and see its battery and heat (Pro)
+
+The chat view works with Claude Code and Codex. Any other command-line tool (Gemini CLI, aider, and so on) works in the terminal view.
+
+If you already use herdr, Orca or cmux, their agents show up in the app too, so you keep working in the tools you use now.
+
+## Get started
+
+**1. Install the app on your phone.** (Coming soon)
+
+**2. Install terminal-itda on your computer.** Open a terminal and paste one line.
+
+macOS or Linux:
+
 ```sh
 curl -fsSL https://github.com/da-itda/terminal-itda/releases/latest/download/install.sh | sh
 ```
-Linux needs systemd for the background service (Ubuntu, Debian, Fedora, …).
 
-**Windows** (PowerShell, Windows 10 1809 or later)
+Windows (PowerShell):
+
 ```powershell
 irm https://github.com/da-itda/terminal-itda/releases/latest/download/install.ps1 | iex
 ```
-If Windows Firewall asks about terminal-itda, allow it so phones on your Wi-Fi connect directly.
 
-What the installer does
-1. Installs terminal-itda (short alias: `itda`) for your OS and CPU, or updates it to the latest version.
-2. Checks Claude Code, Codex and herdr (optional). It asks before installing or updating anything.
-3. Sets up the background service and SSH through Tailscale (optional), then shows a QR code to connect your phone.
+The installer asks before it changes anything. It sets terminal-itda to start when you log in and, at the end, shows a QR code.
 
-Run `terminal-itda` for the commands (`setup`, `pair`, `tools`, `ssh`, `status`, `update`, …).
+**3. Scan the QR code with the app.** Approve the phone on the computer, and the computer appears in the app.
 
-## AI workspace tools
-If you use herdr, Orca or cmux, their agents show up in the phone app too (a tab per tool), with their conversations and input. None needed: without a tool, work started on the phone runs in terminal-itda's own session in the folder you pick.
-Tools found on the computer are on by default. Turn one off in the app (computer ⋮ > Tools) or on the computer:
-```sh
-terminal-itda tools            # what is installed and running
-terminal-itda tools off orca   # or: on, start
-```
-cmux only lets other programs in when Settings > Automation allows automation.
+To connect another phone later, run `terminal-itda pair`.
 
-## AI plan usage
-The app's home shows how much of your Claude Code and Codex plans is left (5-hour and weekly windows) and when each refills. The computer reads it with the login those tools already have; the login never leaves the computer, only the percentages and reset times.
+## Requirements
 
-## Images for the AI
-Photos, camera shots and clipboard images from the app's chat go to the computer (encrypted, kept 7 days in `~/.itda/uploads`) and Claude Code or Codex reads them.
+- macOS, Linux with systemd (Ubuntu, Debian, Fedora, …), or Windows 10 (1809) or later
+- Claude Code or Codex, installed and signed in on the computer
+- The computer needs to be on and awake while you use it from the phone
 
-## SSH from your phone (Tailscale)
-If the computer is on Tailscale, the app offers to add it as an SSH host: Tailscale SSH where it runs (Linux, Homebrew macOS), else the computer's SSH server with the phone's key.
-```sh
-terminal-itda ssh    # what is set up, and set up what is missing
-```
-On Windows, keys of administrator accounts are approved on the computer with `terminal-itda ssh`.
+At home the phone connects to the computer over Wi-Fi. Elsewhere it goes through our relay server. Either way the connection is end-to-end encrypted between your phone and your computer, and the relay can't read it.
 
-## Update
-```sh
-terminal-itda update
-```
+If Windows Firewall asks about terminal-itda, allow it so phones on the same Wi-Fi can connect directly.
 
-This repository contains release files only.
+## Commands
+
+`itda` is a short alias for `terminal-itda`.
+
+| Command | What it does |
+|---|---|
+| `terminal-itda status` | What is running and which phones are connected |
+| `terminal-itda pair` | Connect a phone |
+| `terminal-itda devices` | List connected phones (`devices remove <n>` to remove one) |
+| `terminal-itda tools` | herdr, Orca and cmux: which ones the app uses (`tools off orca`) |
+| `terminal-itda ssh` | Set up SSH from your phone through Tailscale (optional) |
+| `terminal-itda awake setup` | macOS: let it stay awake with the lid closed (asks for your password once) |
+| `terminal-itda update` | Update to the latest version |
+| `terminal-itda service restart` | Restart the background service |
+| `terminal-itda uninstall` | Stop the service and undo setup |
+
+## Privacy
+
+- Your conversations stay on your computer. The app reads them from the computer when you open them; they aren't uploaded anywhere.
+- Your Claude and Codex logins never leave the computer. For plan usage, only the percentages and reset times go to your phone.
+- Images you send are saved on the computer in `~/.itda/uploads` and deleted after 7 days.
+- Notifications are encrypted on the computer and only your phone can read them.
+
+## Pricing
+
+terminal-itda is free with one computer. Pro connects more computers and keeps a laptop awake with the lid closed. Prices will be on the website.
+The AI tools themselves (Claude, Codex) are billed by their own providers.
+
+## Help
+
+Questions, problems or ideas: [customer@newer.co.kr](mailto:customer@newer.co.kr)
+
+When something doesn't work, `terminal-itda status` usually shows why. Include its output in your email.
+
+---
+
+© Newer. terminal-itda is not open source. See [LICENSE](LICENSE).
