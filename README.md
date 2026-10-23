@@ -14,7 +14,8 @@ It has two parts: a phone app, and a small program you install on your computer.
 
 - See what each AI is working on, on every computer you connect
 - Read the conversation and reply in a chat view, or open the real terminal
-- Get a notification when a task finishes or needs your answer
+- Get a notification when a task finishes or needs your answer; it goes away once you've looked
+- Answer the AI's questions (run this command? which option?) with a tap: the choices show on the phone
 - Send photos, screenshots or clipboard images for the AI to look at
 - Tap a file the AI mentions (`docs/PLAN.md:12`) to read it from the computer
 - See how much of your Claude and Codex plan is left, and when it resets
@@ -22,7 +23,7 @@ It has two parts: a phone app, and a small program you install on your computer.
 
 The chat view works with Claude Code and Codex. Any other command-line tool (Gemini CLI, aider, and so on) works in the terminal view.
 
-If you already use herdr, Orca or cmux, their agents show up in the app too, so you keep working in the tools you use now.
+If you already use herdr, Orca or cmux, their agents show up in the app too, so you keep working in the tools you use now. What each one is doing comes from the tool itself, so the AIs it knows (OpenCode, Gemini, Grok, Hermes, OpenClaw, Codebuff, Command Code and many more) show as working, waiting for you, or done.
 
 ## Get started
 
