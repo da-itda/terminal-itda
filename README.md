@@ -15,6 +15,7 @@ It has two parts: a phone app, and a small program you install on your computer.
 - See what each AI is working on, on every computer you connect
 - Read the conversation and reply in a chat view, or open the real terminal
 - Get a notification when a task finishes or needs your answer; it goes away once you've looked
+- Notifications reach your watch too (Wear OS, Galaxy Watch, Apple Watch): no watch app needed
 - Answer the AI's questions (run this command? which option?) with a tap: the choices show on the phone
 - Send photos, screenshots or clipboard images for the AI to look at
 - Tap a file the AI mentions (`docs/PLAN.md:12`) to read it from the computer
