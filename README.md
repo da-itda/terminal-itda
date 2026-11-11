@@ -6,8 +6,9 @@ terminal-itda lets you follow and steer Claude Code and Codex on your computer f
 
 It has two parts: a phone app, and a small program you install on your computer. This repository has the computer program. The source code is not public.
 
-**Phone app:** Android and iPhone coming soon<br>
-**Website:** coming soon<br>
+**Phone app:** [Android (Google Play)](https://play.google.com/store/apps/details?id=com.newer.terminalitda) · iPhone coming soon<br>
+**Website:** https://newer.co.kr/terminalitda/<br>
+**What's new:** [releases](https://github.com/da-itda/terminal-itda/releases) · [CHANGELOG](CHANGELOG.md)<br>
 **Contact:** [customer@newer.co.kr](mailto:customer@newer.co.kr)
 
 ## What you can do from the phone
@@ -26,9 +27,21 @@ The chat view works with Claude Code and Codex. Any other command-line tool (Gem
 
 If you already use herdr, Orca or cmux, their agents show up in the app too, so you keep working in the tools you use now. What each one is doing comes from the tool itself, so the AIs it knows (OpenCode, Gemini, Grok, Hermes, OpenClaw, Codebuff, Command Code and many more) show as working, waiting for you, or done.
 
+## Works with
+
+- **Phones:** Android (Google Play); iPhone coming soon
+- **Watches:** notifications on Wear OS, Galaxy Watch and Apple Watch (no watch app needed)
+- **Computers:** macOS 13 or later, Linux with systemd, Windows 10 (1809) or later; Intel/AMD and ARM
+- **AI coding agents, chat view:** Claude Code, Codex, Hermes
+- **Other AI agents, status (working, needs you, done):** OpenCode, Gemini CLI, Grok, Codebuff, Command Code, OpenClaw, Qwen Code, Kimi, Amp, Droid, Cursor Agent, Copilot CLI, aider, Goose, Crush, Kilo, Cline, DeepSeek, Mistral Vibe and more
+- **AI workspace tools:** herdr, Orca, cmux
+- **ACP (Agent Client Protocol) agents:** Hermes, OpenCode, Goose, Gemini CLI, Copilot, Qwen Code, Kimi, Kilo, Cursor, Cline, OpenClaw, Droid, Auggie, Mistral Vibe, Amp, Pi
+- **Local models:** Ollama, LM Studio
+- **Remote access:** Tailscale (SSH from your phone, and between your computers)
+
 ## Get started
 
-**1. Install the app on your phone.** (Coming soon)
+**1. Install the app on your phone.** [Android (Google Play)](https://play.google.com/store/apps/details?id=com.newer.terminalitda); iPhone coming soon.
 
 **2. Install terminal-itda on your computer.** Open a terminal and paste one line.
 
@@ -49,6 +62,8 @@ The installer asks before it changes anything. It sets terminal-itda to start wh
 **3. Scan the QR code with the app.** Approve the phone on the computer, and the computer appears in the app.
 
 To connect another phone later, run `terminal-itda pair`.
+
+To update later, run `terminal-itda update` (or *Check for updates* in the menu). What changed in each version is in the [CHANGELOG](CHANGELOG.md).
 
 On macOS and Windows, terminal-itda also has an icon in the menu bar (macOS) or the notification area (Windows). Its menu shows the connected phones, work in progress and the computer's IP addresses (click one to copy it). From the same menu you can turn keep awake on or off, connect a smartphone, check for updates and install them, and quit terminal-itda.
 
