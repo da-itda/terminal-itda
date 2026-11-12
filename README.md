@@ -35,6 +35,7 @@ If you already use herdr, Orca or cmux, their agents show up in the app too, so 
 - **AI coding agents, chat view:** Claude Code, Codex, Hermes
 - **Other AI agents, status (working, needs you, done):** OpenCode, Gemini CLI, Grok, Codebuff, Command Code, OpenClaw, Qwen Code, Kimi, Amp, Droid, Cursor Agent, Copilot CLI, aider, Goose, Crush, Kilo, Cline, DeepSeek, Mistral Vibe and more
 - **AI workspace tools:** herdr, Orca, cmux
+- **Plain terminals:** tmux (full control from the phone), iTerm2 (read and send), macOS Terminal (take the conversation over to the phone), Windows and other terminals (status)
 - **ACP (Agent Client Protocol) agents:** Hermes, OpenCode, Goose, Gemini CLI, Copilot, Qwen Code, Kimi, Kilo, Cursor, Cline, OpenClaw, Droid, Auggie, Mistral Vibe, Amp, Pi
 - **Local models:** Ollama, LM Studio
 - **Remote access:** Tailscale (SSH from your phone, and between your computers)
