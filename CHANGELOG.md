@@ -2,6 +2,28 @@
 
 What changed in terminal-itda for your computer, and why. Each version is also on the [releases page](https://github.com/da-itda/terminal-itda/releases).
 
+## 0.21.0 (2026-11-12)
+
+**Claude and Codex in plain terminals, and live progress in chat.**
+
+#### Why
+- Claude Code or Codex started in a plain terminal (no herdr, Orca or cmux) only showed as a past conversation
+- While the AI worked, the chat only said "working", not what it was doing
+- The same conversation resumed in two places by hand splits its history
+- After a computer went down without warning (a restart that hung, a power cut), work in herdr didn't open again
+
+#### What's changed
+- Claude Code and Codex in plain terminals show in a new **Terminal** tab, with their status
+- tmux: full control from the phone (read the screen, type, keys)
+- iTerm2: read the screen and send messages
+- macOS Terminal and others: **Type from the phone too** moves the conversation into terminal-itda, in the same Terminal tab
+- Windows: AIs started from a shell are found too; the desktop apps are left out
+- The chat shows the AI's live status line and the tool it runs right now
+- **Open twice:** the app marks a conversation open in two places, says where the other one is, and takes you there
+- Work opens again even after the computer goes down without warning: settings and the list of open work are saved so a power cut can't empty them
+- Windows: `file://C:/…` links open
+- The **Terminal** tab, the live status line and **Open twice** show in the phone app from its next update (1.1.0)
+
 ## 0.20.4 (2026-11-04)
 
 **Windows: elevated herdr handled for you.**
