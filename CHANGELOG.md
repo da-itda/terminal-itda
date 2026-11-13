@@ -2,6 +2,27 @@
 
 What changed in terminal-itda for your computer, and why. Each version is also on the [releases page](https://github.com/da-itda/terminal-itda/releases).
 
+## 0.21.1 (2026-11-13)
+
+**Work comes back in the mode you left it in, and an update popup.**
+
+#### Why
+- Claude opened in bypass came back in auto after a restart, and Codex in yolo came back asking for approvals: only the conversation was continued, so each program started in its settings' default
+- After a forced power-off, a Codex could come back in another pane, or not at all
+- On Windows, a remote herdr reconnecting after a restart could start herdr's server with administrator rights
+- An update was only seen by those who looked for it
+
+#### What's changed
+- Work comes back in the mode you chose: Claude's permission mode (bypass, plan, auto, …) and Codex's approvals and sandbox (yolo, …), read from the conversation's own log and launch command
+- Every AI in herdr is remembered with its place (workspace, tab, pane), conversation and mode; after a restart each one is checked, and one that came back in the wrong pane or mode is opened again as it was, only while nobody can have used it
+- herdr 0.9.5 or later is told the whole command for each pane, so it opens them in their mode right away; with an older herdr server terminal-itda does it after herdr starts
+- Codex comes back without its update question; a Codex conversation whose log Codex compressed is still continued
+- A conversation whose folder was renamed comes back in its current mode
+- AIs in plain terminals (tmux, iTerm2, Terminal, Windows consoles) and cmux open again once after a restart, in their folder and mode
+- Windows: herdr's server starts with ordinary rights the moment you log on, and the logon task brings work back before terminal-itda itself is up
+- `terminal-itda tools repair on|off` turns the automatic repair after a restart on or off (on)
+- A popup says when terminal-itda has an update, once per version; `terminal-itda update` takes the newest release listed on GitHub
+
 ## 0.21.0 (2026-11-12)
 
 **Claude and Codex in plain terminals, and live progress in chat.**
