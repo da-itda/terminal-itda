@@ -2,6 +2,22 @@
 
 What changed in terminal-itda for your computer, and why. Each version is also on the [releases page](https://github.com/da-itda/terminal-itda/releases).
 
+## 0.21.2 (2026-11-13)
+
+**The update notice is the system's own notification.**
+
+#### Why
+- The update notice was a box in the middle of the screen, not the notification other programs show at the side
+- A new version could wait up to 6 hours before the computer heard of it
+- An update run in a terminal restarted terminal-itda twice
+
+#### What's changed
+- The update notice comes in at the side of the screen and stays in the notification list, under terminal-itda's name and icon (macOS Notification Center, Windows notifications)
+- Click it and terminal-itda updates in a terminal right away, then restarts
+- macOS asks once whether terminal-itda may send notifications; turn them off or on again in System Settings › Notifications › terminal-itda
+- New versions are checked every hour
+- An update from the menu or the notice restarts terminal-itda once
+
 ## 0.21.1 (2026-11-13)
 
 **Work comes back in the mode you left it in, and an update popup.**
