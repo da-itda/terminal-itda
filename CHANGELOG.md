@@ -2,6 +2,21 @@
 
 What changed in terminal-itda for your computer, and why. Each version is also on the [releases page](https://github.com/da-itda/terminal-itda/releases).
 
+## 0.21.4 (2026-11-14)
+
+**A new tray panel on Windows, and update checks that stay open.**
+
+#### Why
+- Clicking "Check for updates" closed the menu (macOS panel, Windows menu), so the result could only be seen by opening it again
+- The Windows menu was Windows' plain menu, unlike the macOS panel
+
+#### What's changed
+- The update button shows its check, the result and the update where it was pressed; the panel closes when you click elsewhere or press Esc
+- Windows: the notification-area icon opens a panel like the macOS one: the computer and its addresses (click to copy), connect a phone, your AI work with status badges, this computer (phones, SSH, keep awake switch), local models, and the version with update and quit
+- The Windows panel follows the system's light or dark mode, has rounded corners on Windows 11 and stays sharp at any display scale
+- The Windows panel shows 5 AI works; the rest are counted below
+- Test builds no longer offer the release before them as an update
+
 ## 0.21.3 (2026-11-14)
 
 **Windows updates are no longer stopped by Microsoft Defender.**
