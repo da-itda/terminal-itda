@@ -2,6 +2,18 @@
 
 What changed in terminal-itda for your computer, and why. Each version is also on the [releases page](https://github.com/da-itda/terminal-itda/releases).
 
+## 0.21.3 (2026-11-14)
+
+**Windows updates are no longer stopped by Microsoft Defender.**
+
+#### Why
+- On Windows, updating from the menu, the notice or `terminal-itda update` could stop without a word: Microsoft Defender took the update command (the installer downloaded and run in one go) for malware (Trojan:Win32/Commando.B!ml) and ended it, so the old version stayed
+
+#### What's changed
+- `terminal-itda update` downloads the installer, checks it against the release's checksums, saves it and runs the file; a changed installer is never run
+- The same on macOS and Linux
+- If an update from 0.21.2 or older is stopped on Windows, try again, or run the install command in a PowerShell window
+
 ## 0.21.2 (2026-11-13)
 
 **The update notice is the system's own notification.**
