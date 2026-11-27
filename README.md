@@ -6,7 +6,7 @@ terminal-itda lets you follow and steer Claude Code and Codex on your computer f
 
 It has two parts: a phone app, and a small program you install on your computer. This repository has the computer program. The source code is not public.
 
-**Phone app:** [Android (Google Play)](https://play.google.com/store/apps/details?id=com.newer.terminalitda) · iPhone coming soon<br>
+**Phone app:** [Android (Google Play)](https://play.google.com/store/apps/details?id=com.newer.terminalitda) · [iPhone (App Store)](https://apps.apple.com/app/id6827886220)<br>
 **Website:** https://newer.co.kr/terminalitda/<br>
 **What's new:** [releases](https://github.com/da-itda/terminal-itda/releases) · [CHANGELOG](CHANGELOG.md)<br>
 **Contact:** [customer@newer.co.kr](mailto:customer@newer.co.kr)
@@ -29,7 +29,7 @@ If you already use herdr, Orca or cmux, their agents show up in the app too, so 
 
 ## Works with
 
-- **Phones:** Android (Google Play); iPhone coming soon
+- **Phones:** Android (Google Play), iPhone (App Store)
 - **Watches:** notifications on Wear OS, Galaxy Watch and Apple Watch (no watch app needed)
 - **Computers:** macOS 13 or later, Linux with systemd, Windows 10 (1809) or later; Intel/AMD and ARM
 - **AI coding agents, chat view:** Claude Code, Codex, Hermes
@@ -42,7 +42,7 @@ If you already use herdr, Orca or cmux, their agents show up in the app too, so 
 
 ## Get started
 
-**1. Install the app on your phone.** [Android (Google Play)](https://play.google.com/store/apps/details?id=com.newer.terminalitda); iPhone coming soon.
+**1. Install the app on your phone.** [Android (Google Play)](https://play.google.com/store/apps/details?id=com.newer.terminalitda); [iPhone (App Store)](https://apps.apple.com/app/id6827886220).
 
 **2. Install terminal-itda on your computer.** Open a terminal and paste one line.
 
@@ -90,6 +90,7 @@ If Windows Firewall asks about terminal-itda, allow it so phones on the same Wi-
 | `terminal-itda tools` | herdr, Orca and cmux: which ones the app uses (`tools off orca`) |
 | `terminal-itda ssh` | Set up SSH from your phone through Tailscale (optional) |
 | `terminal-itda awake setup` | macOS: let it stay awake with the lid closed (asks for your password once) |
+| `terminal-itda todo app` | macOS, Windows: open the to-do app (your account's to-dos on the computer; downloaded the first time, linked with the phone's QR scan) |
 | `terminal-itda update` | Update to the latest version |
 | `terminal-itda service restart` | Restart the background service |
 | `terminal-itda uninstall` | Stop the service and undo setup |
