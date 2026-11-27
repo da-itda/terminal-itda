@@ -2,6 +2,26 @@
 
 What changed in terminal-itda for your computer, and why. Each version is also on the [releases page](https://github.com/da-itda/terminal-itda/releases).
 
+## 1.0.0 (2026-11-27)
+
+**To-dos on your computers, a desktop to-do app, and a faster phone connection.**
+
+#### Why
+- To-dos written on the phone stayed on the phone: the AIs working on a computer didn't see them, and finished ones had to be checked by hand
+- There was no to-do list on the computer itself
+- Each request from the phone opened a new connection through the relay, so screens away from home waited for it again and again
+
+#### What's changed
+- To-dos reach your computers: `terminal-itda todo` shows the open to-dos of this folder's project to you and your AIs, and `terminal-itda todo done <n>` checks them off on the phone
+- To-dos an AI worked on but didn't check off are found when its work rests, by a small model that looks at the latest part of the conversation without saving anything or writing into it
+- The desktop to-do app: `terminal-itda todo app` downloads, checks and opens it (macOS, Windows); link it to your account by scanning its QR code with the phone; `terminal-itda update` keeps it up to date
+- The menu bar and the Windows panel show the open to-dos of this computer's projects, and open the to-do app
+- The phone asks several things one after another on one connection, so screens through the relay answer sooner
+- AI questions asked while it works reach the phone, and typed answers reach every AI
+- A command run in the AI's own program (/model, /resume, ! …) shows in the chat with what it printed
+- Windows: the terminal button opens a herdr pane too, so pickers like /model and /resume can be used from the phone
+- A conversation started in a folder renamed since shows in the new folder
+
 ## 0.21.4 (2026-11-14)
 
 **A new tray panel on Windows, and update checks that stay open.**
